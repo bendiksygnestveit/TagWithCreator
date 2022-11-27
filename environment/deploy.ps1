@@ -1,9 +1,9 @@
-$resourceGroupName = "awfunctionsdev"            # <-- REPLACE the variable values with your own values.
-$location = "australiasoutheast"                 # <-- Ensure that the location is a valid Azure location
-$storageAccountName = "awfunctionsdev"           # <-- Ensure the storage account name is unique
-$appServicePlanName = "AustraliaSoutheastPlan"   # <--
-$appInsightsName = "awfunctionsdev"              # <--
-$functionName = "awfunctionsdev"                 # <--
+$resourceGroupName = "rg-tagfunctionapp-dev-noe"            # <-- REPLACE the variable values with your own values.
+$location = "norwayeast"                 # <-- Ensure that the location is a valid Azure location
+$storageAccountName = "stdkdevcreatedbytag"           # <-- Ensure the storage account name is unique
+$appServicePlanName = "asp-dk-dev-createdbytag"   # <--
+$appInsightsName = "appi-dk-dev-createdbytag"              # <--
+$functionName = "func-dk-dev-createdbytag"                 # <--
 
 New-AzResourceGroup -Name $resourceGroupName -Location $location -Force -Verbose
 
