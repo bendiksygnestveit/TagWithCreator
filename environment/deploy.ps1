@@ -1,4 +1,4 @@
-$resourceGroupName = "rg-tagfunctionapp-dev-noe"            # <-- REPLACE the variable values with your own values.
+$resourceGroupName = "rg-tagwithcreator-dev-noe"            # <-- REPLACE the variable values with your own values.
 $location = "norwayeast"                 # <-- Ensure that the location is a valid Azure location
 $storageAccountName = "stdkdevcreatedbytag"           # <-- Ensure the storage account name is unique
 $appServicePlanName = "asp-dk-dev-createdbytag"   # <--
