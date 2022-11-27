@@ -47,7 +47,10 @@
             "name": "[parameters('appInsightsName')]",
             "type": "Microsoft.Insights/components",
             "location": "[resourceGroup().location]",
-            "tags": {},
+            "tags": {
+                "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/sites/', parameters('functionName'))]": "Resource",
+                "displayName": "AppInsightsComponent"
+            },
             "properties": {
                 "applicationId": "[parameters('appInsightsName')]"
             }
@@ -63,10 +66,8 @@
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]"
             ],
             "properties": {
-                "httpsOnly": true,
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('appServicePlanName'))]",
                 "siteConfig": {
-                    "minTlsVersion": "1.2",
                     "appSettings": [
                         {
                             "name": "AzureWebJobsDashboard",
